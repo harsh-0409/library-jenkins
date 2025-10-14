@@ -1,0 +1,75 @@
+/* Library Management New Color Scheme (Teal & Plum) */
+.library-container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 28px 34px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#f8f9fb 0%, #eef2f5 100%);
+  box-shadow: 0 8px 28px rgba(50,50,93,0.25), 0 4px 16px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+h2, h3 {
+  color: #2c2e3a;
+  letter-spacing: .5px;
+  font-weight: 600;
+}
+
+input, select {
+  padding: 12px 14px;
+  margin: 6px 0 14px;
+  width: 100%;
+  border: 2px solid #cad5df;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color .25s, box-shadow .25s;
+}
+input:focus {
+  outline: none;
+  border-color: #00a2b7;
+  box-shadow: 0 0 0 3px rgba(0,162,183,0.15);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 18px;
+}
+
+.btn-group { margin-top: 4px; display:flex; flex-wrap:wrap; gap:12px; }
+button {
+  padding: 12px 22px;
+  border: none;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing:.5px;
+  position:relative;
+  overflow:hidden;
+  transition: background .3s, transform .2s;
+}
+button:active { transform: scale(.95); }
+
+.btn-primary { background: #00b4c8; color:#fff; }
+.btn-primary:hover { background:#0095a5; }
+.btn-accent { background:#7b2cbf; color:#fff; }
+.btn-accent:hover { background:#641fa2; }
+.btn-danger { background:#ff4d5d; color:#fff; }
+.btn-danger:hover { background:#d93645; }
+.btn-muted { background:#6c7a89; color:#fff; }
+.btn-muted:hover { background:#56636f; }
+
+.table-wrapper { margin-top:24px; overflow:auto; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th, td { padding:14px 16px; border-bottom:1px solid #e3e8ee; }
+th { background:#f1f5f9; font-weight:600; text-transform:uppercase; font-size:12px; letter-spacing:1px; }
+tr:hover { background:#f9fafb; }
+
+.action-buttons { display:flex; gap:10px; }
+
+pre { background:#1e293b; color:#e2e8f0; padding:14px; border-radius:12px; font-size:13px; }
+
+.message-banner { position:fixed; top:16px; left:50%; transform:translateX(-50%); padding:14px 28px; border-radius:14px; font-weight:600; z-index:1000; box-shadow:0 4px 18px rgba(0,0,0,0.2); }
+.message-banner.error { background:#ff4d5d; color:#fff; }
+.message-banner.success { background:#00b894; color:#fff; }

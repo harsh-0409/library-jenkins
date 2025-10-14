@@ -1,0 +1,72 @@
+# Java/Spring Boot
+LIBAPI-SPRINGBOOT/target/
+LIBAPI-SPRINGBOOT/.mvn/wrapper/maven-wrapper.jar
+LIBAPI-SPRINGBOOT/.mvn/wrapper/maven-wrapper.properties
+LIBAPI-SPRINGBOOT/.mvn/wrapper/MavenWrapperDownloader.java
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Maven
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# React/Node.js/Vite
+LIBAPI-REACT/node_modules/
+LIBAPI-REACT/dist/
+LIBAPI-REACT/.env.local
+LIBAPI-REACT/.env.development.local
+LIBAPI-REACT/.env.test.local
+LIBAPI-REACT/.env.production.local
+LIBAPI-REACT/npm-debug.log*
+LIBAPI-REACT/yarn-debug.log*
+LIBAPI-REACT/yarn-error.log*
+LIBAPI-REACT/pnpm-debug.log*
+LIBAPI-REACT/lerna-debug.log*
+
+# General IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+.metadata
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Security
+*.pem
+*.key
+secrets.txt
