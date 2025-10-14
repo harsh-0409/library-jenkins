@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Library Frontend') {
             steps {
-                dir('LIBRARY-MANAGEMENT/LIBAPI-REACT') {
+                dir('LIBAPI-REACT') {
                     bat 'npm install'
                     bat 'npm run build'
                 }
@@ -18,14 +18,14 @@ pipeline {
                     rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryreact"
                 )
                 mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryreact"
-                xcopy /E /I /Y LIBRARY-MANAGEMENT\\LIBAPI-REACT\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryreact"
+                xcopy /E /I /Y LIBAPI-REACT\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryreact"
                 '''
             }
         }
 
         stage('Build Library Backend') {
             steps {
-                dir('LIBRARY-MANAGEMENT/LIBAPI-SPRINGBOOT') {
+                dir('LIBAPI-SPRINGBOOT') {
                     bat 'mvn clean package'
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
                 if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryspring" (
                     rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\libraryspring"
                 )
-                copy "LIBRARY-MANAGEMENT\\LIBAPI-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
+                copy "LIBAPI-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
                 '''
             }
         }
